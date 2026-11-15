@@ -18,3 +18,4 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 .DS_Store
+!automation/results/m6_runs.csv

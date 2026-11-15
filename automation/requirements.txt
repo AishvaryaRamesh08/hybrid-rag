@@ -1,0 +1,9 @@
+chromadb
+sentence-transformers
+torch
+pdfplumber
+pymongo
+pymysql
+google-genai
+numpy
+matplotlib

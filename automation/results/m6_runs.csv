@@ -1,0 +1,531 @@
+assemble,category,correct,encode,fact_hits,fact_total,factual,generate,id,llm_calls,llm_error,mode,mongo,rate_limit_wait,regenerated,removed,resolve,retrieval_ok,retrieve_parallel,round,route,sql,supported,total,vector,verify,answer
+0.2,specification,True,17.6,2,2,1,775.2,S1,1,False,baseline,7.3,0.0,False,0,,True,7.7,1,0.6,,1,802.0,6.4,0.6,"The nominal capacity of the Prismacell 280Ah LiFePO4 cell is 280 Ah (measured at 0.5 C discharge, 25 °C), and its nominal cell voltage is 3.20 V [S2][S4]."
+0.1,specification,True,17.9,2,2,2,739.0,S2,1,False,baseline,7.7,0.0,False,0,,True,8.1,1,0.3,,2,765.7,6.6,0.1,"The current rating of fuse FUS-FAST-600A is 600 A RMS, and its nominal voltage rating is 700 V DC / 1,000 V AC [S2][S4].
+
+* The component specification document applies to the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 energy storage systems [S4]."
+0.1,specification,True,17.2,2,2,5,835.1,S3,1,False,baseline,,0.0,False,0,,True,6.0,1,0.5,,5,859.0,5.8,0.2,"The Megapack X-7000 delivers a nominal power output of 1,750 kW and an energy capacity of 7,000 kWh, which is 7.0 MWh [S1][S2].
+
+* Model Identifier: X-7000 [S1][S2].
+* Equipment Series: Megapack High-Capacity Industrial Series [S1].
+* Nominal Output Power: 1,750 kW [S1].
+* Energy capacity: 7,000 kWh (7.0 MWh) [S1][S2]."
+0.1,specification,True,19.2,2,2,2,784.9,S4,1,False,baseline,6.0,0.0,False,0,,True,6.6,1,0.3,,2,811.3,6.4,0.1,"The trigger current that fires the ACT-PYRO-1200 pyrofuse is a 2.0 A DC pulse with a 10 ms duration [S4]. 
+It achieves a total physical arc-clearing time of less than 1.8 ms from the receipt of the command pulse [S2][S4]."
+0.1,specification,True,18.7,1,1,3,810.8,S5,1,False,baseline,,0.0,False,0,,True,3.6,1,0.2,,3,833.7,3.4,0.2,"Personnel must evacuate to a minimum perimeter distance of 100 meters (330 feet) during an emergency involving smoke, venting, or a continuous audible alarm [S1][S3].
+
+* Personnel must depress the external emergency stop push-button located on the northwest exterior cabinet panel and evacuate to a minimum perimeter distance of 100 meters (330 feet) [S1][S3].
+* Emergency response actions also require tripping the master substation breaker, isolating the medium-voltage transformer, and evacuating 100m [S2]."
+0.1,specification,True,19.1,1,1,4,805.3,S6,1,False,baseline,3.5,0.0,False,0,,True,12.8,1,0.2,,4,837.9,12.7,0.2,"Fault code ERR_BMS_708 means Thermal Runaway Warning, and its corrective action is for the system to engage auto-deluge, evacuate the area, and avoid restarting without engineering recertification [S2].
+
+* Telemetry reading TLM-90008 on unit SN-C12-0055 (Model C-1200) recorded a status of CRITICAL_FAULT with 82.5 C and a delta of 145 mV [S3].
+* The primary root cause is coolant flow obstruction, pump failure, or internal short circuit [S2].
+* Flagged parts include CEL-LFP-280 [S3]."
+0.2,temporal,True,17.6,2,2,3,951.4,T1,1,False,baseline,5.8,0.0,False,0,15.3,True,52.0,1,0.2,51.6,3,1036.8,5.7,0.2,"The records for equipment unit EQ-7171 show two warranty claims filed in 2021 [S9].
+
+* Warranty Claim CLM-9599 was filed on 2021-10-19 with an Approved status for Part: DC Contactor 400A Model-B (PRT-2136), and its recorded dispatch link is DISP-13247 which is recorded for a different unit, EQ-5905 [S8].
+* Warranty Claim CLM-10026 was filed on 2021-09-12 with an Under Review status for Part: DisplayTech LCD Unit Model-A (PRT-2138), and its recorded dispatch link is DISP-14336 which is recorded for a different unit, EQ-5220 [S9]."
+0.1,temporal,True,18.6,2,2,6,1203.0,T2,1,False,baseline,7.8,0.0,False,0,16.1,True,22.3,1,0.2,22.1,5,1260.8,7.5,0.3,"On 2024-09-28, unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export [S9].
+
+* Telemetry reading TLM-90002 at 16:04:10 UTC showed a scheduled high-power ramp initiated with status RAMP_UP, 980 V, 1500 A, 36.1 C, and no flagged parts [S4].
+* Telemetry reading TLM-90003 at 16:04:11 UTC reported a pre-charge resistor failure detected with fault ERR_PRE_003, flagged part RES-PR-50, and a firmware v2.4.08 abort failed note [S6].
+* Telemetry reading TLM-90004 at 16:04:12 UTC recorded a DC overcurrent trip and arc flash with status CRITICAL_FAULT, fault ERR_INV_404, 1750 V, 8250 A, 85.0 C, and flagged parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 [S8].
+* The high-speed protection circuit tripped upstream 34.5 kV substation recloser REC-34 to isolate the unit, and total equipment damage was localized to the DC pre-charge contactor and main line contactor CON-MAIN-800 [S12].
+* No ERP record exists for SN-X7-0094 [S1]."
+0.2,temporal,True,17.8,1,1,4,1094.4,T3,1,False,baseline,6.5,0.0,False,0,15.5,True,20.8,1,0.2,20.6,4,1149.1,9.9,0.2,"Unit SN-X7-0150 reported fault code ERR_FUSE_001 in September 2026 [S2].
+
+* Telemetry records show 18 readings of fault ERR_FUSE_001 between 2026-09-01 and 2026-09-18, including readings TLM-90026, TLM-90036, and TLM-90046 [S2].
+* Reading TLM-90026 on 2026-09-01 11:30:00 UTC shows a critical fault with 980 V, 8250 A, 85.0 C, SOC 75.0%, and delta 350 mV [S6].
+* The flagged part for the September 2026 fuse fault is FUS-FAST-600A, with the note to replace the semiconductor fuse due to a blown DC string fuse [S6]."
+0.2,temporal,True,16.2,1,1,4,1184.8,T4,1,False,baseline,6.6,0.0,False,0,15.5,True,50.2,1,0.2,49.8,4,1267.5,6.5,0.3,"The most recent warranty claim for equipment unit EQ-7171 is claim CLM-T0106301 [S3].
+
+* Claim CLM-T0106301 was filed on 2026-11-14 with a pending status, claiming $845.00 with pending approval for part Solid-State Circuit Breaker Model-C (PRT-2001) from Supplier-A, and has no recorded denial reason [S3].
+* The warranty at the claim date is recorded as Out of Warranty, and its recorded dispatch link is DISP-T0106301 [S1][S3].
+* Earlier warranty claims on record for unit EQ-7171 include CLM-9208 filed on 2023-08-06, CLM-9714 filed on 2022-05-04, CLM-9599 filed on 2021-10-19, and CLM-10026 filed on 2021-09-12 [S5][S7][S8][S9]."
+0.1,temporal,True,17.0,2,2,3,1121.1,T5,1,False,baseline,4.2,0.0,False,0,,True,13.1,1,0.2,,3,1151.7,12.6,0.2,"Fault code ERR_COOL_302 first occurred on 2025-01-14 08:30:00 UTC on unit SN-C12-0055 [S3].
+
+* Telemetry reading TLM-90006 for unit SN-C12-0055 recorded status WARNING, fault ERR_COOL_302, moderate severity, and flagged parts SEN-FL-022 and FLT-GLY-701 [S3].
+* The manual for the X-7000 model states that the primary root causes for ERR_COOL_302 are an airlock in the glycol manifold, strainer clog, or impeller cavitation [S2]."
+0.2,temporal,True,18.7,2,2,1,760.8,T6,1,False,baseline,4.3,0.0,False,0,15.4,True,50.5,1,0.3,50.4,1,846.0,5.3,0.1,"Equipment unit EQ-7171 was installed on 2022-07-05, and its warranty expired on 2023-07-05 [S1]."
+0.2,multi-hop,True,20.6,3,3,6,1222.6,M1,1,False,baseline,6.3,0.0,False,0,15.5,True,19.9,1,0.3,19.5,6,1279.4,8.6,0.3,"For the arc flash on unit SN-X7-0094, the incident investigation report and telemetry records detail the event and the specific components involved [S3][S6][S8].
+
+* Unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export [S3][S5].
+* The high-speed protection circuit tripped the upstream 34.5 kV substation recloser REC-34, which isolated the unit, with total equipment damage localized to the DC pre-charge contactor and main line contactor CON-MAIN-800 [S3].
+* Flagged parts include RES-PR-50 due to a pre-charge resistor failure detected during the ramp [S6].
+* Flagged parts also include CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 noted during the DC Overcurrent Trip and arc flash detection [S8].
+* No personnel injuries occurred during the incident [S3]."
+0.2,multi-hop,True,19.2,1,1,4,1115.0,M2,1,False,baseline,8.3,0.0,False,0,,True,83.0,1,0.2,82.5,4,1217.8,64.8,0.2,"The telemetry fault that occurs most on model X-7000 units is ERR_INV_404, with 20 readings on 3 units [S2].
+
+* Model-level manual GV-MAN-X7000-001 states the primary root cause is inverter commutation failure, line-to-line bridge breakdown [S3].
+* The corrective action given in model-level manual GV-MAN-X7000-001 is to inspect Part INV-SCR-9901 thyristor pack and output fuses, and check AC grid synchronization logs [S3].
+* Telemetry reading TLM-90004 for unit SN-X7-0094 on model X-7000 recorded a DC overcurrent trip with a temperature of 85.0 C, a current of 8250 A, and flagged parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 [S9]."
+0.2,multi-hop,False,18.9,2,3,11,1657.2,M3,1,False,baseline,4.9,0.0,False,0,15.7,True,52.1,1,0.2,51.6,11,1744.8,8.6,0.5,"The complete service and warranty history for equipment unit EQ-7171 includes nine records, alongside model-level telemetry fault patterns for the X-7000 [S1][S10].
+
+- Service Event DISP-14701: Software Update on 2022-05-10 (Pending) [S6].
+- Warranty Claim CLM-9714 filed 2022-05-04 (Rejected) [S7].
+- Warranty Claim CLM-10026 filed 2021-09-12 (Under Review) [S9].
+- Warranty Claim CLM-9599 filed 2021-10-19 (Approved) [S8].
+- Warranty Claim CLM-9208 filed 2023-08-06 (Pending) [S5].
+- Service Event DISP-10768: Emergency Repair on 2023-09-28 (Cancelled) [S4].
+- Service Event DISP-T0106301: Diagnostic on 2026-11-14 (Completed) [S3].
+- Service Event DISP-T0106302: Corrective Maintenance on 2026-11-14 (Pending) [S2].
+- Warranty Claim CLM-T0106301 filed 2026-11-14 (Pending) [S3].
+- Telemetry fault patterns for model X-7000 (model-level data: telemetry unit IDs do not map to ERP unit EQ-7171) show ERR_INV_404 with 20 readings across 3 units (max 85.0 C from 2024-09-28 to 2026-09-18), ERR_FUSE_001 with 18 readings on 1 unit (max 85.0 C from 2026-09-01 to 2026-09-18), and ERR_PRE_003 with 2 readings on 1 unit (max 39.1 C from 2024-09-28 to 2026-11-14, with unit SN-X7-0094 showing pre-charge resistor failure flagged as RES-PR-50) [S3][S10][S14]."
+0.2,multi-hop,True,20.7,1,1,3,895.4,M4,1,False,baseline,7.3,0.0,False,0,,True,25.0,1,0.3,0.0,3,941.7,24.0,0.1,"Fault code ERR_COOL_302 on C-1200 units is covered by warranty if preventative maintenance records show quarterly filter service, and void if air filters FLT-AIR-12 or glycol cartridges FLT-GLY-701 were unserviced for over 12 months [S3].
+
+* The GV-SOP-WAR-101 warranty SOP requires telemetry proof showing a coolant pump failure and a chiller pressure excursion [S3].
+* The ERP has no equipment or service records for model C-1200 [S1]."
+0.1,multi-hop,True,19.2,1,1,4,845.9,M5,1,False,baseline,2.6,0.0,False,0,,True,10.5,1,0.2,,4,876.2,10.3,0.2,"Part FUS-FAST-600A has a nominal current rating of 600 A RMS, a nominal voltage rating of 700 V DC / 1,000 V AC, an interrupting rating of 100 kA DC at 700 V DC with a time constant L/R = 10 ms, and a melting clearing integral rating of 42,000 A²s at rated voltage [S6].
+
+* The component specification document applies to the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 energy storage systems [S7].
+* The fuse terminal geometry is flush-end blade style with dual M10 bolt mounting holes and a torque limit of 14.5 N·m [S6].
+* The manufacturer is Eaton Bussmann or Mersen, which are Gigavolt Qualified Vendors [S6][S7]."
+0.2,multi-hop,True,19.8,1,1,7,1219.1,M6,1,False,baseline,,0.0,False,0,,True,56.2,1,0.3,56.0,7,1295.9,5.1,0.4,"The most common service resolutions for X-5000 units include performing standard preventive checks with firmware updates to v4.2.1 (206 dispatches), replacing burnt fuse blocks (203 dispatches), cleaning heat exchangers for over-temperature alarms (185 dispatches), replacing faulty thermal sensors (177 dispatches), and calibrating inverter outputs (175 dispatches) [S1], while the records show 80 approved X-5000 warranty claims [S3].
+
+* Model-level service resolutions for X-5000 units are recorded across 206 dispatches for preventive checks and firmware v4.2.1 updates [S1].
+* Model-level service resolutions for X-5000 units include 203 dispatches for replacing burnt fuse blocks [S1].
+* Model-level service resolutions for X-5000 units include 185 emergency dispatches to clean heat exchangers for over-temperature alarms [S1].
+* Model-level service resolutions for X-5000 units include 177 dispatches to replace faulty thermal sensors and verify system bus voltage [S1].
+* Model-level service resolutions for X-5000 units include 175 dispatches for calibrating inverter outputs [S1].
+* Fleet-wide X-5000 warranty claim records show 80 approved claims totalling $176134.74 [S3]."
+0.1,supply chain,True,18.7,3,3,4,1012.9,C1,1,False,baseline,,0.0,False,0,,True,20.4,1,0.2,20.1,4,1052.6,10.7,0.2,"Lithium cells for commercial energy storage units are provided by SinoPower Cell Foundry (SUP-SPC-11) and Aura Energy Storage Ltd. (SUP-AUR-04) [S2][S8].
+
+* SinoPower Cell Foundry (SUP-SPC-11) is a Tier-2 Cell Manufacturer that supplies Prismacell 280Ah raw cells (CEL-LFP-280) [S2].
+* Aura Energy Storage Ltd. (SUP-AUR-04) is a Tier-1 supplier that fabricates CobaltMax 65Ah NMC-811 pouch cells (CEL-NMC-065) utilized in the PowerStation G-3500 commercial energy storage unit [S8].
+* Voltaic Core Technologies (SUP-VCT-01) manufactures Prismacell 280Ah LiFePO4 cells (CEL-LFP-280) under contract [S10]."
+0.1,supply chain,True,17.2,1,1,4,794.7,C2,1,False,baseline,,0.0,False,0,,True,21.5,1,0.2,21.4,4,834.0,10.4,0.2,"The NMC cells used in the PowerStation G-3500 are fabricated by Tier-1 supplier Aura Energy Storage Ltd. (Supplier ID: SUP-AUR-04) [S6].
+
+* The CobaltMax 65Ah (Gigavolt Internal P/N: CEL-NMC-065) pouch cell is deployed strictly within the PowerStation G-3500 commercial energy storage unit [S6].
+* The cell uses a Nickel-Manganese-Cobalt cathode formulation (Ni 80%, Mn 10%, Co 10%) with a graphite-silicon composite anode [S6].
+* Tier-3 active material supplier Katanga Cobalt & Mineral Refining (SUP-KMR-03) supplies cobalt sulfate and nickel sulfate hexahydrate crystals [S2]."
+0.1,supply chain,True,19.9,1,1,5,2395.1,C3,1,False,baseline,,0.0,False,0,,True,19.8,1,0.3,19.6,5,2435.4,7.0,0.2,"Semicon Dynamics Inc. (SUP-SDI-09) is the critical sole-source supplier for the inverter gate drive PCB (PCB-DRV-3500), and the mitigation is a redesign project ECO-2025-004 initiated to utilize discrete automotive-grade microcontrollers [S2].
+
+* The component description is Inverter Gate Drive PCB with part number PCB-DRV-3500 [S2].
+* The primary Tier-1/Tier-2 supplier is Semicon Dynamics Inc. (SUP-SDI-09) [S2][S4][S5].
+* The upstream vulnerability is a sole-source custom ASIC gate driver chip with a 26-week foundry lead time [S2].
+* The risk level is assessed as Critical [S2]."
+0.1,supply chain,False,18.9,0,1,7,916.1,C4,1,False,baseline,,0.0,False,0,,True,20.7,1,0.2,20.3,6,956.4,8.8,0.3,"The supplier quality audit of SinoPower Cell Foundry was prompted by elevated field reports of cell voltage divergence (fault code ERR_BMS_701) in Megapack X-7000 modules [S2][S4].
+
+* The audit was an unannounced on-site quality and manufacturing process audit conducted across Plant 2, located in the High-Tech Industrial Park, Hefei, Anhui Province [S2][S4].
+* The assessment took place from September 11 to September 13, 2024 [S2][S4].
+* The audit was led by Dr. Aris Thorne, Director of Global Quality Assurance [S2][S4].
+* The target component of the audit was the Prismacell 280Ah LiFePO4 Cell (CEL-LFP-280) [S2][S4].
+* The audit was documented under tracking ID AUD-2024-SPC-02 for SinoPower Cell Foundry, which has Gigavolt Supplier ID SUP-SPC-11 [S4]."
+0.2,supply chain,True,18.5,5,5,6,1102.3,C5,1,False,baseline,,0.0,False,0,,True,20.4,1,0.2,20.2,6,1141.8,14.1,0.2,"Suppliers in our parts catalog that supply lithium cell modules include Supplier-C, Supplier-E, Supplier-A, Supplier-B, and Supplier-D [S1][S3][S5][S7][S9].
+
+* Supplier-C supplies Lithium Cell Module 48V Model-A (PRT-2009) and Lithium Cell Module 48V Model-PRO (PRT-2090) [S1].
+* Supplier-E supplies Lithium Cell Module 48V Model-A (PRT-2143) and Lithium Cell Module 48V Model-A (PRT-2053) [S3].
+* Supplier-A supplies Lithium Cell Module 48V Model-MAX (PRT-2024) [S5].
+* Supplier-B supplies Lithium Cell Module 48V Model-B (PRT-2041) [S7].
+* Supplier-D supplies Lithium Cell Module 48V Model-C (PRT-2115) and Lithium Cell Module 48V Model-MAX (PRT-2087) [S9]."
+0.2,supply chain,True,19.0,2,2,3,832.5,C6,1,False,baseline,,0.0,False,0,,True,19.9,1,0.3,19.8,3,872.1,8.1,0.2,"The Tier-2 cell manufacturer for the Prismacell 280Ah cell is SinoPower Cell Foundry (SUP-SPC-11), and the secondary supplier alternative being qualified is EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) [S2][S6].
+
+* The Prismacell 280Ah raw cells (CEL-LFP-280) are supplied by Tier-2 Cell Manufacturer SinoPower Cell Foundry (SUP-SPC-11) [S2].
+* EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) is listed as the secondary supplier alternative [S6]."
+0.2,grounding,True,19.0,0,0,0,604.6,G1,1,False,baseline,,0.0,False,0,,True,3.2,1,0.2,,0,627.3,3.1,0.0,The available records do not show Gigavolt's total revenue last quarter [S1][S2][S3].
+0.2,grounding,True,18.5,1,1,6,1414.0,G2,1,False,baseline,5.3,0.0,False,0,15.4,True,20.3,1,0.2,19.5,6,1468.8,7.5,0.2,"Unit SN-4829 has no service history records or warranty claims in the enterprise records [S1].
+
+* No ERP record exists for SN-4829 because the equipment_units table has no matching equipment_id or serial_number [S1].
+* Unit SN-4829 has 18 telemetry readings, and none of them contains a fault code [S2].
+* Telemetry reading TLM-90198 from 2026-09-18 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with no fault, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and no flagged parts [S4].
+* Telemetry reading TLM-90188 from 2026-09-17 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with no fault, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and no flagged parts [S6].
+* Telemetry reading TLM-90178 from 2026-09-16 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with no fault, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and no flagged parts [S8]."
+0.1,specification,True,16.8,2,2,1,536.9,S1,1,False,baseline,5.9,0.0,False,0,,True,6.3,2,0.2,,1,560.4,3.9,0.1,"The nominal capacity of the Prismacell 280Ah LiFePO4 Cell is 280 Ah (measured at 0.5 C discharge, 25 °C), and its nominal cell voltage is 3.20 V [S2][S4]."
+0.2,specification,True,19.2,2,2,2,1013.7,S2,1,False,baseline,6.8,0.0,False,0,,True,7.2,2,0.3,,2,1040.7,5.6,0.2,"Fuse FUS-FAST-600A has a nominal current rating of 600 A RMS and a nominal voltage rating of 700 V DC / 1,000 V AC [S2]. 
+
+* The component specification document GV-SPEC-FUSE-PYRO-04 applies to the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 energy storage systems [S4]."
+0.1,specification,True,17.1,2,2,2,812.7,S3,1,False,baseline,,0.0,False,0,,True,5.4,2,0.3,,2,835.8,5.3,0.1,"The Megapack X-7000 delivers a nominal power output of 1,750 kW with an energy capacity of 7,000 kWh, equating to 7.0 MWh [S1][S2].
+
+* Model-level specifications for the X-7000 state a nominal output power of 1,750 kW and an energy capacity of 7,000 kWh (7.0 MWh) [S1][S2]."
+0.1,specification,True,18.7,2,2,1,675.3,S4,1,False,baseline,6.6,0.0,False,0,,True,6.8,2,0.3,,1,701.3,5.2,0.1,"The ACT-PYRO-1200 pyrofuse is triggered by a 2.0 A DC pulse of 10 ms duration, and it clears the arc in less than 1.8 ms from the receipt of the command pulse [S2][S4]."
+0.1,specification,True,18.8,1,1,3,740.2,S5,1,False,baseline,,0.0,False,0,,True,3.3,2,0.2,,3,762.9,3.2,0.2,"Personnel must evacuate to a minimum perimeter distance of 100 meters (330 feet) during a battery fire emergency [S1][S3].
+
+* If smoke, venting, or a continuous audible alarm is present, personnel must depress the external emergency stop (E-STOP) push-button located on the northwest exterior cabinet panel and evacuate to this minimum perimeter distance [S1][S3].
+* Emergency response actions also require tripping the master substation breaker and isolating the medium-voltage transformer when evacuating 100m [S2]."
+0.1,specification,True,18.6,1,1,5,626.7,S6,1,False,baseline,2.5,0.0,False,0,,True,11.7,2,0.2,,5,657.6,11.6,0.2,"Fault code ERR_BMS_708 means Thermal Runaway Warning, and its corrective action is for the system to engage auto-deluge, evacuate the area, and prohibit restart without engineering recertification [S2].
+
+* Telemetry Name: Thermal Runaway Warning [S2].
+* Severity: Fatal [S2].
+* Primary Root Cause: Coolant flow obstruction, pump failure, internal short circuit [S2].
+* Corrective Action: System engages auto-deluge, evacuate area, and do not attempt restart without engineering recertification [S2]."
+0.2,temporal,True,17.8,2,2,3,866.2,T1,1,False,baseline,5.5,0.0,False,0,15.5,True,52.4,2,0.3,52.2,3,952.6,9.7,0.2,"The warranty claims filed for equipment unit EQ-7171 in 2021 are recorded as follows [S8][S9].
+
+* Warranty Claim CLM-9599 filed on 2021-10-19 with Approved status, for Part: DC Contactor 400A Model-B (PRT-2136), with a recorded dispatch link to DISP-13247 for a different unit, EQ-5905 [S8].
+* Warranty Claim CLM-10026 filed on 2021-09-12 with Under Review status, for Part: DisplayTech LCD Unit Model-A (PRT-2138), with a recorded dispatch link to DISP-14336 for a different unit, EQ-5220 [S9]."
+0.2,temporal,True,18.1,2,2,6,1512.9,T2,1,False,baseline,4.0,0.0,False,0,15.5,True,21.3,2,0.2,21.0,6,1568.5,11.0,0.3,"Unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export on September 28, 2024 [S9].
+
+* Telemetry reading TLM-90002 at 2024-09-28 16:04:10 UTC for Model X-7000 shows status RAMP_UP with no fault, 980 V, 1500 A, 36.1 C, SOC 44.9%, delta 15 mV, and no flagged parts during the scheduled high-power ramp initiated [S4].
+* Telemetry reading TLM-90003 at 2024-09-28 16:04:11 UTC shows status FAULT with fault ERR_PRE_003 (pre-charge resistor failure detected, firmware v2.4.08 abort failed), 1750 V, 0 A, 37.0 C, SOC 44.9%, delta 15 mV, and flagged part RES-PR-50 [S6].
+* Telemetry reading TLM-90004 at 2024-09-28 16:04:12 UTC shows status CRITICAL_FAULT with fault ERR_INV_404 (DC Overcurrent Trip, arc flash detected), 1750 V, 8250 A, 85.0 C, SOC 44.9%, delta 350 mV, and flagged parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 [S8].
+* The high-speed protection circuit tripped upstream 34.5 kV substation recloser REC-34 to isolate the unit, and total equipment damage was localized to the DC pre-charge contactor and main line contactor CON-MAIN-800 [S12].
+* No ERP record exists for SN-X7-0094 because equipment_units has no matching equipment_id or serial_number [S1]."
+0.2,temporal,True,17.5,1,1,5,995.8,T3,1,False,baseline,6.7,0.0,False,0,15.5,True,20.6,2,0.2,19.9,5,1050.2,7.2,0.3,"Unit SN-X7-0150 reported fault code ERR_FUSE_001 in September 2026 [S2].
+
+* Unit SN-X7-0150 recorded 18 readings of fault ERR_FUSE_001 between 2026-09-01 and 2026-09-18, reaching a maximum temperature of 85.0 C [S2].
+* A telemetry reading such as TLM-90026 on 2026-09-01 11:30:00 UTC for Model X-7000 showed status CRITICAL_FAULT, 980 V, 8250 A, 85.0 C, SOC 75.0%, and a delta of 350 mV with flagged parts FUS-FAST-600A and the note DC String Fuse Blown [S6].
+* The mechanism for ERR_INV_404, defined in manual GV-MAN-X7000-001 for Model X-7000, is an inverter commutation failure and line-to-line bridge breakdown [S8].
+* No ERP record exists for unit SN-X7-0150 because equipment_units has no matching equipment_id or serial_number [S1]."
+0.2,temporal,True,16.8,1,1,6,920.0,T4,1,False,baseline,5.8,0.0,False,0,15.7,True,51.2,2,0.2,51.0,6,1004.4,7.1,0.3,"The most recent warranty claim for equipment unit EQ-7171 is claim CLM-T0106301, which was filed on 2026-11-14 [S3].
+
+- Claim ID: CLM-T0106301 filed on 2026-11-14 with a status of Pending [S3].
+- Part: Solid-State Circuit Breaker Model-C (PRT-2001) supplied by Supplier-A [S3].
+- Financials: Claimed $845.00, Approved: Pending, with no denial reason [S3].
+- Warranty Status: Out of Warranty at the claim date [S3].
+- Recorded Dispatch Link: DISP-T0106301 [S3]."
+0.1,temporal,True,16.9,2,2,4,865.8,T5,1,False,baseline,2.7,0.0,False,0,,True,10.1,2,0.2,,4,893.3,10.0,0.2,"Fault code ERR_COOL_302 first occurred on 2025-01-14 08:30:00 UTC for unit SN-C12-0055 [S3].
+
+* Telemetry reading TLM-90006 recorded the event on unit SN-C12-0055 with a moderate severity status and a temperature of 55.4 C [S3].
+* The mechanism for fault code ERR_COOL_302 involves an airlock in the glycol manifold, a strainer clog, or impeller cavitation, according to the C-1200 manual GV-MAN-X7000-001 [S2].
+* Flagged parts associated with this initial occurrence on unit SN-C12-0055 were SEN-FL-022 and FLT-GLY-701 [S3]."
+0.2,temporal,True,18.7,2,2,1,770.2,T6,1,False,baseline,5.3,0.0,False,0,15.5,True,51.9,2,0.3,51.4,1,856.8,4.7,0.1,"Equipment unit EQ-7171 was installed on 2022-07-05, and its warranty expires on 2023-07-05 [S1]."
+0.1,multi-hop,True,19.7,3,3,4,937.0,M1,1,False,baseline,4.6,0.0,False,0,15.5,True,21.0,2,0.3,20.4,4,994.0,8.6,0.3,"Unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a high-power ramp, with flagged parts including RES-PR-50, CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 [S3][S6][S8].
+
+* The incident occurred at 16:04:12 CST on September 28, 2024, at the Rio Bravo Wind and Solar Hybrid Plant in Pecos County, TX, during a scheduled ramp from standby to 1,750 kW full export [S3][S5].
+* The high-speed protection circuit tripped upstream 34.5 kV substation recloser REC-34, isolating the unit, and total equipment damage was localized to the DC pre-charge contactor and main line contactor CON-MAIN-800 [S3].
+* No personnel injuries occurred, and the investigation was led by Marcus Vance, Lead Power Electronics Architect [S3][S5]."
+0.2,multi-hop,True,18.6,1,1,4,847.6,M2,1,False,baseline,4.7,0.0,False,0,,True,75.1,2,0.2,74.7,4,941.9,51.5,0.2,"The telemetry fault that occurs most on X-7000 units is ERR_INV_404 [S2].
+
+* Model-level manual GV-MAN-X7000-001 states the primary root cause for ERR_INV_404 is an inverter commutation failure and line-to-line bridge breakdown [S3].
+* The corrective action given in GV-MAN-X7000-001 is to inspect Part INV-SCR-9901 thyristor pack and output fuses, and check AC grid synchronization logs [S3].
+* Telemetry records show 20 readings for ERR_INV_404 across 3 units with a maximum temperature of 85.0 C [S2]."
+0.2,multi-hop,False,18.7,2,3,12,2086.4,M3,1,False,baseline,5.8,0.0,False,0,15.7,True,50.8,2,0.2,49.8,11,2172.6,7.1,0.6,"The complete service history for equipment unit EQ-7171 and the telemetry fault patterns for model X-7000 are recorded in enterprise databases [S1][S10].
+
+* Software Update DISP-14701: 2022-05-10 (Pending), replaced faulty thermal sensor and verified system bus voltage [S6].
+* Warranty Claim CLM-9714: 2022-05-04 (Rejected), Thermal Sensor Module Model-C (PRT-2147), recorded dispatch link DISP-13115 for different unit EQ-5270 [S7].
+* Warranty Claim CLM-10026: 2021-09-12 (Under Review), DisplayTech LCD Unit Model-A (PRT-2138), recorded dispatch link DISP-14336 for different unit EQ-5220 [S9].
+* Warranty Claim CLM-9599: 2021-10-19 (Approved), DC Contactor 400A Model-B (PRT-2136), recorded dispatch link DISP-13247 for different unit EQ-5905 [S8].
+* Emergency Repair DISP-10768: 2023-09-28 (Cancelled), cleaned heat exchanger due to over-temperature alarm [S4].
+* Warranty Claim CLM-9208: 2023-08-06 (Pending), Fusing Unit 200A Model-PRO (PRT-2020), recorded dispatch link DISP-13497 for different unit EQ-5224 [S5].
+* Diagnostic DISP-106301: 2026-11-14 (Completed), inspected pre-charge circuit after ERR_PRE_003 alarm, replaced resistor RES-PR-50 with warranty claim CLM-T0106301 filed for Solid-State Circuit Breaker Model-C (PRT-2001) [S3].
+* Corrective Maintenance DISP-T0106302: 2026-11-14 (Pending), verified inverter bay INV-01 contactor torque after inspection [S2].
+* Model X-7000 telemetry fault patterns (model-level data from telemetry unit IDs not mapping directly to EQ-7171): ERR_INV_404 shows 20 readings on 3 units with max 85.0 C from 2024-09-28 to 2026-09-18 (e.g., TLM-90004) [S10].
+* Model X-7000 telemetry fault patterns: ERR_FUSE_001 shows 18 readings on 1 unit with max 85.0 C from 2026-09-01 to 2026-09-18 (e.g., TLM-90026) [S10].
+* Model X-7000 telemetry fault patterns: ERR_PRE_003 shows 2 readings on 1 unit with max 39.1 C from 2024-09-28 to 2026-11-14 (e.g., TLM-90003, mechanism shows pre-charge resistor failure detected with flagged part RES-PR-50) [S10][S14]."
+0.2,multi-hop,True,20.0,1,1,3,726.2,M4,1,False,baseline,7.2,0.0,False,0,,True,23.0,2,0.3,0.0,3,769.8,22.8,0.1,"Fault code ERR_COOL_302 is covered under warranty if preventative maintenance records show quarterly filter service, provided that air filters FLT-AIR-12 or glycol cartridges FLT-GLY-701 were not unserviced for more than 12 months [S3].
+
+* The warranty SOP requires telemetry proof of coolant pump failure and chiller pressure excursions [S3].
+* The ERP has no equipment or service records for model C-1200 [S1]."
+0.1,multi-hop,True,18.7,1,1,4,1019.7,M5,1,False,baseline,2.4,0.0,False,0,,True,10.6,2,0.2,,4,1049.6,10.5,0.2,"Part FUS-FAST-600A has a nominal current rating of 600 A RMS, a nominal voltage rating of 700 V DC / 1,000 V AC, an interrupting rating of 100 kA DC at 700 V DC with a time constant L/R = 10 ms, and a melting clearing integral rating of 42,000 A squared s at rated voltage [S6].
+
+- The part is an ultra-fast pyrotechnic and semiconductor protection fuse specified for energy storage systems including the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 [S7].
+- Its manufacturer is Eaton Bussmann or Mersen as a Gigavolt Qualified Vendor [S6][S7].
+- Its terminal geometry is a flush-end blade style featuring dual M10 bolt mounting holes with a torque limit of 14.5 N m [S6]."
+0.2,multi-hop,True,19.4,1,1,7,1301.2,M6,1,False,baseline,,0.0,False,0,,True,55.5,2,0.3,55.3,7,1376.9,4.4,0.4,"The most common service resolutions for X-5000 units include performing standard preventive checks with firmware updates, replacing burnt fuse blocks, cleaning heat exchangers for over-temperature alarms, replacing thermal sensors, and calibrating inverter outputs, while 80 X-5000 warranty claims were approved [S1][S3].
+
+* Performed standard preventive check and updated firmware to v4.2.1 across 206 dispatches (e.g., DISP-10572, DISP-11563, DISP-10294) [S1].
+* Replaced burnt fuse block and completed successful test runs across 203 dispatches (e.g., DISP-10765, DISP-12818, DISP-12713) [S1].
+* Cleaned heat exchangers during emergency dispatches for over-temperature alarms across 185 dispatches (e.g., DISP-13324, DISP-13100, DISP-12204) [S1].
+* Replaced faulty thermal sensors and verified system bus voltage across 177 dispatches (e.g., DISP-11450, DISP-11158, DISP-12255) [S1].
+* Calibrated inverter outputs with systems operating within normal parameters across 175 dispatches (e.g., DISP-11725, DISP-13908, DISP-10110) [S1].
+* A total of 80 warranty claims were approved for X-5000 units, representing $176134.74 claimed [S3]."
+0.1,supply chain,True,18.6,3,3,6,1266.3,C1,1,False,baseline,,0.0,False,0,,True,20.1,2,0.2,19.7,6,1305.9,10.4,0.4,"The available records identify multiple suppliers providing lithium cells and raw cells for commercial energy storage units [S1][S2][S3][S5][S6][S7][S8][S9][S10].
+
+* Supplier-C supplies 4 matching catalog parts including Lithium Cell Module 48V Model-A (PRT-2009), Lithium Cell Module 48V Model-PRO (PRT-2090), Solid Lithium Cell Array Model-C (PRT-2129), and Solid Lithium Cell Array Model-MAX (PRT-2007) [S1].
+* SinoPower Cell Foundry (SUP-SPC-11) is a Tier-2 cell manufacturer supplying Prismacell 280Ah raw cells (CEL-LFP-280) [S2].
+* Supplier-A supplies 3 matching catalog parts including Lithium Cell Module 48V Model-MAX (PRT-2024), Solid Lithium Cell Array Model-B (PRT-2150), and Solid Lithium Cell Array Model-MAX (PRT-2038) [S3].
+* Voltaic Core Technologies (SUP-VCT-01) is a Tier-1 supplier that manufactures the Prismacell 280Ah LiFePO4 cell (CEL-LFP-280) utilized in the Megapack X-7000 and CompactGrid C-1200 battery modules [S10].
+* Aura Energy Storage Ltd. (SUP-AUR-04) is a Tier-1 supplier that fabricates the CobaltMax 65Ah NMC-811 pouch cell (CEL-NMC-065) deployed strictly within the PowerStation G-3500 commercial energy storage unit [S8]."
+0.1,supply chain,True,17.5,1,1,5,985.0,C2,1,False,baseline,,0.0,False,0,,True,20.8,2,0.3,20.4,5,1024.0,9.5,0.2,"The NMC cells used in the PowerStation G-3500 are fabricated by Tier-1 supplier Aura Energy Storage Ltd. (Supplier ID: SUP-AUR-04) [S4][S6].
+
+* The CobaltMax 65Ah NMC-811 pouch cell (Gigavolt Internal P/N: CEL-NMC-065) is deployed strictly within the PowerStation G-3500 commercial energy storage unit [S6].
+* Aura Energy Storage Ltd. supplies 24V NMC Pouch modules and thermal gap filler pads as the Tier-1 Pack Supplier [S4].
+* The Tier-2 Pouch Cell Fabricator is Apex Cell Tech Corp (SUP-ACT-07), which supplies the CobaltMax 65Ah pouch cells (CEL-NMC-065) [S2].
+* The Tier-3 Active Material Supplier is Katanga Cobalt & Mineral Refining (SUP-KMR-03), supplying cobalt sulfate and nickel sulfate hexahydrate crystals [S2]."
+0.1,supply chain,True,19.3,1,1,4,1095.7,C3,1,False,baseline,,0.0,False,0,,True,21.5,2,0.3,21.0,4,1137.1,11.1,0.2,"Semicon Dynamics Inc. (SUP-SDI-09) is identified as the sole-source supplier for the inverter gate drive PCB (PCB-DRV-3500), and the mitigation involves a redesign project to use discrete microcontrollers [S2][S4].
+
+* The Inverter Gate Drive PCB (Part Number PCB-DRV-3500) has an upstream vulnerability consisting of a sole-source custom ASIC gate driver chip with a 26-week foundry lead time, resulting in a critical risk level [S2].
+* The secondary supplier alternative and mitigation protocol is a redesign project designated as ECO-2025-004 initiated to utilize discrete automotive-grade microcontrollers [S2].
+* Semicon Dynamics Inc. (SUP-SDI-09) supplies Tier-1 Inverter and Gate Driver Assemblies, specifically including gate drive cards (PCB-DRV-3500) and SCR thyristor packs (INV-SCR-9901) [S4]."
+0.1,supply chain,False,19.0,0,1,7,912.9,C4,1,False,baseline,,0.0,False,0,,True,21.0,2,0.2,20.6,6,953.5,10.9,0.3,"The supplier quality audit of SinoPower Cell Foundry assessed the Tier-2 SinoPower Cell Foundry QA with the audit tracking ID AUD-2024-SPC-02 [S4].
+
+* The unannounced on-site quality and manufacturing process audit was conducted across Plant 2, High-Tech Industrial Park, Hefei, Anhui Province [S2][S4].
+* The audit dates were September 11 - September 13, 2024 [S2][S4].
+* The lead auditor was Dr. Aris Thorne, Director of Global Quality Assurance [S2][S4].
+* The target component was the Prismacell 280Ah LiFePO4 Cell (CEL-LFP-280) [S2][S4].
+* The audit was conducted following elevated field reports of cell voltage divergence (ERR_BMS_701) in Megapack X-7000 modules [S2]."
+0.2,supply chain,True,18.5,5,5,6,1280.5,C5,1,False,baseline,,0.0,False,0,,True,20.2,2,0.2,19.8,6,1320.0,8.0,0.3,"Suppliers in the parts catalog that supply lithium cell modules include Supplier-C, Supplier-E, Supplier-A, Supplier-B, and Supplier-D [S1][S3][S5][S7][S9].
+
+* Supplier-C supplies 4 matching catalog parts, including Lithium Cell Module 48V Model-A (PRT-2009), Lithium Cell Module 48V Model-PRO (PRT-2090), Solid Lithium Cell Array Model-C (PRT-2129), and Solid Lithium Cell Array Model-MAX (PRT-2007) [S1].
+* Supplier-E supplies 4 matching catalog parts, including Lithium Cell Module 48V Model-A (PRT-2143), Lithium Cell Module 48V Model-A (PRT-2053), Lithium Cell Module 48V Model-PRO (PRT-2120), and Thermal Sensor Module Model-A (PRT-2021) [S3].
+* Supplier-A supplies 3 matching catalog parts, including Lithium Cell Module 48V Model-MAX (PRT-2024), Solid Lithium Cell Array Model-B (PRT-2150), and Solid Lithium Cell Array Model-MAX (PRT-2038) [S5].
+* Supplier-B supplies 3 matching catalog parts, including Lithium Cell Module 48V Model-B (PRT-2041), Thermal Sensor Module Model-C (PRT-2147), and Thermal Sensor Module Model-MAX (PRT-2059) [S7].
+* Supplier-D supplies 3 matching catalog parts, including Lithium Cell Module 48V Model-C (PRT-2115), Lithium Cell Module 48V Model-MAX (PRT-2087), and Solid Lithium Cell Array Model-MAX (PRT-2144) [S9]."
+0.2,supply chain,True,19.6,2,2,3,803.6,C6,1,False,baseline,,0.0,False,0,,True,21.9,2,0.3,21.5,3,845.8,8.7,0.2,"The Tier-2 cell manufacturer for the Prismacell 280Ah cell is SinoPower Cell Foundry (SUP-SPC-11), and EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) is being qualified as a secondary supplier alternative [S2][S6].
+
+* The Prismacell 280Ah raw cells (CEL-LFP-280) are supplied by Tier-2 Cell Manufacturer SinoPower Cell Foundry (SUP-SPC-11) [S2].
+* EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) is listed as the secondary supplier alternative [S6]."
+0.2,grounding,True,18.7,0,0,0,641.2,G1,1,False,baseline,,0.0,False,0,,True,3.4,2,0.2,,0,663.7,3.2,0.0,The available records do not show Gigavolt's total revenue last quarter [S1][S2][S3].
+0.1,grounding,True,17.2,1,1,5,1404.3,G2,1,False,baseline,4.9,0.0,False,0,15.5,True,20.0,2,0.2,18.6,5,1457.7,4.8,0.2,"Unit SN-4829 has no service history or warranty claims recorded in the ERP, and all of its telemetry readings show normal routine standby status without faults.
+
+* No ERP record exists for SN-4829 as the equipment units database has no matching equipment ID or serial number [S1].
+* Unit SN-4829 has 18 telemetry readings in total, and none of them contain a fault code [S2].
+* Telemetry reading TLM-90178 on 2026-09-16 12:15:00 UTC for Model G-3500 shows status STANDBY, 800 V, 0 A, 31.0 C, SOC 95.0%, and no flagged parts [S8].
+* Telemetry reading TLM-90188 on 2026-09-17 12:15:00 UTC for Model G-3500 shows status STANDBY, 800 V, 0 A, 31.0 C, SOC 95.0%, and no flagged parts [S6].
+* Telemetry reading TLM-90198 on 2026-09-18 12:15:00 UTC for Model G-3500 shows status STANDBY, 800 V, 0 A, 31.0 C, SOC 95.0%, and no flagged parts [S4]."
+0.2,specification,True,18.9,2,2,1,722.0,S1,1,False,optimized,6.8,0.0,False,0,,True,7.2,1,0.2,,1,748.9,5.5,0.1,"The nominal capacity of the Prismacell LFP cell (Gigavolt Internal P/N: CEL-LFP-280) is 280 Ah measured at 0.5 C discharge and 25 degrees Celsius, and its nominal cell voltage is 3.20 V [S2][S4]."
+0.1,specification,True,17.8,2,2,3,606.7,S2,1,False,optimized,6.2,0.0,False,0,,True,6.6,1,0.2,,3,631.8,5.4,0.2,"The current rating of fuse FUS-FAST-600A is 600 A RMS [S2][S4].
+
+* The nominal current rating is 600 A RMS [S2][S4].
+* The nominal voltage rating is 700 V DC / 1,000 V AC [S2]."
+0.1,specification,True,17.1,2,2,4,663.0,S3,1,False,optimized,,0.0,False,0,,True,5.7,1,0.2,,4,686.5,5.5,0.2,"The Megapack X-7000 delivers a nominal power output of 1,750 kW with an energy capacity of 7,000 kWh (7.0 MWh) [S1][S2].
+
+* Model Identifier: X-7000 [S1][S2].
+* Nominal Output Power: 1,750 kW [S1].
+* Energy Capacity: 7,000 kWh (7.0 MWh) [S1][S2]."
+0.1,specification,True,19.2,2,2,1,677.0,S4,1,False,optimized,6.2,0.0,False,0,,True,6.6,1,0.2,,1,703.4,4.2,0.1,The ACT-PYRO-1200 pyrofuse is triggered by a 2.0 A DC pulse of 10 ms duration and clears the arc in less than 1.8 ms from the receipt of the command pulse [S4].
+0.2,specification,True,18.1,1,1,4,783.3,S5,1,False,optimized,,0.0,False,0,,True,3.3,1,0.2,,4,805.5,3.2,0.2,"Personnel must evacuate to a minimum perimeter distance of 100 meters (330 feet) during a battery fire emergency [S1][S3].
+
+* Depress the external emergency stop (E-STOP) push-button located on the northwest exterior cabinet panel [S1][S3].
+* Evacuate to a minimum perimeter distance of 100 meters (330 feet) [S1][S3].
+* Trip the master substation breaker and isolate the medium-voltage transformer [S2]."
+0.1,specification,True,18.8,1,1,3,671.5,S6,1,False,optimized,2.3,0.0,False,0,,True,11.2,1,0.2,,3,702.2,11.0,0.2,"Fault code ERR_BMS_708 is designated as Thermal Runaway Warning with a fatal severity [S2][S3].
+
+* The primary root cause can be coolant flow obstruction, pump failure, or an internal short circuit [S2].
+* The corrective action requires the system to engage auto-deluge, evacuate the area, and prohibit any attempt at a restart without engineering recertification [S2]."
+0.1,temporal,True,16.8,2,2,3,888.4,T1,1,False,optimized,5.5,0.0,False,0,0.8,True,6.6,1,0.2,3.9,3,913.4,6.5,0.2,"Two warranty claims were filed for equipment unit EQ-7171 in 2021 [S1][S2][S3].
+
+* Warranty Claim CLM-9599 was filed on 2021-10-19 and is approved, covering part PRT-2136 with a claimed and approved amount of $2291.49 [S2].
+* Warranty Claim CLM-10026 was filed on 2021-09-12 and is under review, covering part PRT-2138 with an amount of $1776.70 pending [S3]."
+0.1,temporal,True,18.5,2,2,7,1302.6,T2,1,False,optimized,5.5,0.0,False,0,0.7,True,5.9,1,0.2,1.4,7,1328.6,5.4,0.4,"Unit SN-X7-0094 experienced a pre-charge resistor failure and an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp on 2024-09-28 [S8][S9].
+
+* Telemetry reading TLM-90001 on 2024-09-28 at 16:00:00 UTC shows the unit in routine standby with no faults at 35.5 C [S4].
+* Telemetry reading TLM-90002 on 2024-09-28 at 16:04:10 UTC shows a scheduled high-power ramp initiated at 36.1 C with no faults [S6].
+* Telemetry reading TLM-90003 on 2024-09-28 at 16:04:11 UTC shows a pre-charge resistor failure flagged as RES-PR-50 with fault ERR_PRE_003 and a firmware abort failure at 37.0 C [S8].
+* Telemetry reading TLM-90004 on 2024-09-28 at 16:04:12 UTC shows an uncontrolled arc flash and DC Overcurrent Trip with fault ERR_INV_404 at 85.0 C, flagging parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 [S10].
+* The incident report confirms an uncontrolled arc flash occurred within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export at 16:04:12 CST [S9].
+* No ERP record exists for SN-X7-0094 [S1]."
+0.1,temporal,True,17.4,1,1,6,1152.6,T3,1,False,optimized,4.7,0.0,False,0,0.7,True,5.7,1,0.2,1.9,6,1177.3,5.0,0.3,"Unit SN-X7-0150 reported fault code ERR_FUSE_001 in September 2026 across 18 readings [S2].
+
+* Telemetry summary shows 18 readings of ERR_FUSE_001 on unit SN-X7-0150 from 2026-09-01 to 2026-09-18, including readings TLM-90026, TLM-90036, and TLM-90046 [S2].
+* Reading TLM-90026 on 2026-09-01 11:30:00 UTC recorded fault ERR_FUSE_001 with flagged part FUS-FAST-600A and a DC String Fuse Blown note [S4].
+* Reading TLM-90036 on 2026-09-02 11:30:00 UTC recorded fault ERR_FUSE_001 with flagged part FUS-FAST-600A and a DC String Fuse Blown note [S6].
+* Reading TLM-90046 on 2026-09-03 11:30:00 UTC recorded fault ERR_FUSE_001 with flagged part FUS-FAST-600A and a DC String Fuse Blown note [S8].
+* Reading TLM-90056 on 2026-09-04 11:30:00 UTC recorded fault ERR_FUSE_001 with flagged part FUS-FAST-600A and a DC String Fuse Blown note [S10]."
+0.1,temporal,True,17.1,1,1,9,953.2,T4,1,False,optimized,0.3,0.0,False,0,0.8,True,4.3,1,0.2,3.3,9,976.4,4.1,0.4,"The most recent warranty claim for equipment unit EQ-7171 is claim CLM-T0106301 filed on 2026-11-14, with a pending status [S3].
+
+- Claim ID: CLM-T0106301 [S3]
+- Date filed: 2026-11-14 [S3]
+- Part: Solid-State Circuit Breaker Model-C (PRT-2001) [S3]
+- Supplier: Supplier-A [S3]
+- Claimed amount: $845.00 [S3]
+- Approved amount: Pending [S3]
+- Status and denial reason: Pending, with no denial reason [S3]
+- Recorded dispatch link: DISP-T0106301 [S3]"
+0.1,temporal,True,21.1,2,2,4,1284.5,T5,1,False,optimized,2.6,0.0,False,0,,True,12.3,1,0.2,,4,1318.7,11.8,0.2,"Fault code ERR_COOL_302 first occurred on 2025-01-14 08:30:00 UTC on unit SN-C12-0055 [S3].
+
+* Telemetry reading TLM-90006 for unit SN-C12-0055 recorded the initial occurrence on 2025-01-14 08:30:00 UTC [S3].
+* The mechanism involves low coolant flow rate caused by airlocks, strainer clogs, or impeller cavitation, with manual GV-MAN-X7000-001 for Model X-7000 noting primary root causes as airlock in the glycol manifold, strainer clog, or impeller cavitation [S2][S3].
+* Telemetry reading TLM-90006 recorded flagged parts SEN-FL-022 and FLT-GLY-701, a temperature of 55.4 C, and a status warning [S3]."
+0.1,temporal,True,18.4,2,2,1,656.8,T6,1,False,optimized,0.2,0.0,False,0,0.8,True,4.4,1,0.2,3.0,1,681.1,4.2,0.1,Equipment unit EQ-7171 was installed on 2022-07-05 and its warranty expires on 2023-07-05 [S1].
+0.1,multi-hop,True,20.4,3,3,6,1222.0,M1,1,False,optimized,4.7,0.0,False,0,0.7,True,6.0,1,0.3,1.4,6,1250.2,5.8,0.4,"The incident investigation report states that Megapack unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export [S3][S5].
+
+* The incident occurred at 16:04:12 CST on September 28, 2024, at the Rio Bravo Wind and Solar Hybrid Plant in Pecos County, Texas [S3][S5].
+* The high-speed protection circuit tripped upstream 34.5 kV substation recloser REC-34, isolating the unit, and total equipment damage was localized to the DC pre-charge contactor and main line contactor CON-MAIN-800 [S3].
+* Telemetry reading TLM-90003 flagged part RES-PR-50 with a pre-charge resistor failure detected and firmware v2.4.08 abort failed [S6].
+* Telemetry reading TLM-90004 flagged parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 with a DC Overcurrent Trip and arc flash detection [S8].
+* No personnel injuries occurred [S3]."
+0.1,multi-hop,True,19.0,1,1,3,770.4,M2,1,False,optimized,5.1,0.0,False,0,,True,24.6,1,0.2,1.9,3,814.8,24.4,0.2,"The telemetry fault that occurs most on model X-7000 units is ERR_INV_404, with 20 readings [S2].
+
+* Model X-7000 manual GV-MAN-X7000-001 states that the primary root cause of ERR_INV_404 is an inverter commutation failure and line-to-line bridge breakdown [S3].
+* The corrective action for ERR_INV_404 in model X-7000 manual GV-MAN-X7000-001 is to inspect Part INV-SCR-9901 thyristor pack and output fuses, and check AC grid synchronization logs [S3]."
+0.1,multi-hop,False,18.7,0,3,10,4588.3,M3,2,False,optimized,0.2,0.0,True,1,0.7,True,4.4,1,0.2,2.7,10,4614.7,4.2,0.8,"The service history for unit EQ-7171 and the fault patterns for model X-7000 are recorded across multiple service events, warranty claims, and telemetry logs [S1][S3][S5][S6][S7][S8][S9][S10][S11].
+- Software Update on 2021-06-05 (In Progress): Calibrated inverter output and verified system operating within normal parameters [S10].
+- Warranty Claim CLM-10026 filed 2021-09-12 (Under Review): DisplayTech LCD Unit Model-A (PRT-2138) from Supplier-D claimed for $1776.70 with recorded dispatch link DISP-14336 for unit EQ-5220 [S9].
+- Warranty Claim CLM-9599 filed 2021-10-19 (Approved): DC Contactor 400A Model-B (PRT-2136) from Supplier-E claimed and approved for $2291.49 with recorded dispatch link DISP-13247 for unit EQ-5905 [S8].
+- Warranty Claim CLM-9714 filed 2022-05-04 (Rejected): Thermal Sensor Module Model-C (PRT-2147) from Supplier-B claimed for $522.82, rejected due to unauthorized modification detected, with recorded dispatch link DISP-13115 for unit EQ-5270 [S7].
+- Software Update on 2022-05-10 (Pending): Replaced faulty thermal sensor and verified system bus voltage [S6].
+- Warranty Claim CLM-9208 filed 2023-08-06 (Pending): Fusing Unit 200A Model-PRO (PRT-2020) from Supplier-B claimed for $4241.79 with recorded dispatch link DISP-13497 for unit EQ-5224 [S5].
+- Emergency Repair on 2023-09-28 (Cancelled): Cleaned heat exchanger after an over-temperature alarm [S4].
+- Diagnostic on 2026-11-14 (Completed): Inspected pre-charge circuit after ERR_PRE_003 alarm, replaced resistor RES-PR-50, and filed pending warranty claim CLM-T0106301 for Solid-State Circuit Breaker Model-C (PRT-2001) from Supplier-A with claimed amount $845.00 [S3].
+- Corrective Maintenance on 2026-11-14 (Pending): Verified inverter bay INV-01 contactor torque after inspection [S2]."
+0.1,multi-hop,True,20.2,1,1,4,675.8,M4,1,False,optimized,7.4,0.0,False,0,,True,20.3,1,0.2,0.9,4,716.9,20.1,0.2,"The ERP has no equipment or service records for model C-1200 [S1].
+
+* Fault ERR_COOL_302 is covered if preventative maintenance records show quarterly filter service [S3].
+* Coverage is void if air filters FLT-AIR-12 or glycol cartridges FLT-GLY-701 were unserviced for over 12 months [S3].
+* The warranty SOP requires telemetry proof of a coolant pump failure or chiller pressure excursion [S3]."
+0.1,multi-hop,True,19.3,1,1,5,830.0,M5,1,False,optimized,3.0,0.0,False,0,,True,11.8,1,0.2,,5,861.8,11.6,0.2,"The nominal and interrupting ratings for fuse FUS-FAST-600A are specified in component documentation [S6][S7].
+
+* Nominal current rating is 600 A RMS [S6][S7].
+* Nominal voltage rating is 700 V DC / 1,000 V AC [S6].
+* Interrupting rating breaking capacity is 100 kA DC at 700 V DC with a time constant L/R of 10 ms [S6].
+* Melting clearing integral I squared t rating is 42,000 A squared s at rated voltage [S6]."
+0.2,multi-hop,True,19.4,1,1,7,1307.4,M6,1,False,optimized,,0.0,False,0,,True,12.0,1,0.3,11.8,7,1339.7,5.2,0.4,"The most common service resolutions for X-5000 units include preventive checks, fuse block replacements, and emergency over-temperature dispatches, while 80 warranty claims were approved [S1][S3].
+
+- Performed standard preventive check and updated firmware to v4.2.1 across 206 dispatches (e.g., DISP-10572, DISP-11563, DISP-10294) [S1].
+- Replaced burnt fuse block and completed test runs successfully across 203 dispatches (e.g., DISP-10765, DISP-12818, DISP-12713) [S1].
+- Cleaned heat exchanger during emergency dispatches for over-temperature alarms across 185 dispatches (e.g., DISP-13324, DISP-13100, DISP-12204) [S1].
+- Replaced faulty thermal sensor and verified system bus voltage across 177 dispatches (e.g., DISP-11450, DISP-11158, DISP-12255) [S1].
+- Calibrated inverter output with the system operating within normal parameters across 175 dispatches (e.g., DISP-11725, DISP-13908, DISP-10110) [S1].
+- A total of 80 claims were approved for X-5000 units, amounting to $176134.74 claimed [S3]."
+0.1,supply chain,True,18.7,3,3,4,907.6,C1,1,False,optimized,,0.0,False,0,,True,6.7,1,0.2,1.8,4,933.7,6.5,0.3,"Suppliers that provide lithium cells for commercial energy storage units include SinoPower Cell Foundry (SUP-SPC-11), Aura Energy Storage Ltd. (SUP-AUR-04), and Voltaic Core Technologies (SUP-VCT-01) [S2][S6][S10].
+
+* SinoPower Cell Foundry supplies Prismacell 280Ah raw cells (CEL-LFP-280) as a Tier-2 cell manufacturer [S2].
+* Aura Energy Storage Ltd. (Supplier ID: SUP-AUR-04) fabricates the CobaltMax 65Ah NMC-811 Pouch Cell (CEL-NMC-065) deployed in the PowerStation G-3500 commercial energy storage unit [S8].
+* Voltaic Core Technologies (SUP-VCT-01) manufactures the Prismacell 280Ah LiFePO4 cell (CEL-LFP-280), which is utilized in Megapack X-7000 and CompactGrid C-1200 battery modules [S10]."
+0.1,supply chain,True,17.8,1,1,3,737.8,C2,1,False,optimized,,0.0,False,0,,True,8.7,1,0.2,1.9,3,765.1,8.5,0.2,"The Tier-2 pouch cell fabricator Apex Cell Tech Corp (SUP-ACT-07) makes the NMC cells used in the PowerStation G-3500 [S2][S4][S6].
+
+* The CobaltMax 65Ah NMC-811 pouch cell (Gigavolt Internal P/N: CEL-NMC-065) is deployed strictly within the PowerStation G-3500 commercial energy storage unit [S6].
+* This cell is fabricated by Tier-1 supplier Aura Energy Storage Ltd. (Supplier ID: SUP-AUR-04) [S6], which is supplied with 24V NMC pouch modules and thermal gap filler pads by the Tier-2 Pouch Cell Fabricator Apex Cell Tech Corp (SUP-ACT-07) [S2][S4]."
+0.1,supply chain,True,19.4,1,1,4,853.2,C3,1,False,optimized,,0.0,False,0,,True,6.4,1,0.2,1.9,4,879.7,6.3,0.2,"Semicon Dynamics Inc. is the critical sole-source risk for the inverter gate drive PCB, and the mitigation involves a redesign project to utilize discrete automotive-grade microcontrollers [S2].
+
+* The Inverter Gate Drive PCB (Part Number PCB-DRV-3500) has an upstream vulnerability of a sole-source custom ASIC gate driver chip with a 26-week foundry lead time [S2].
+* Its primary Tier-1/Tier-2 supplier is Semicon Dynamics Inc., also referred to by the code SUP-SDI-09 [S2][S4].
+* The secondary supplier alternative mitigation is redesign project ECO-2025-004, which was initiated to utilize discrete automotive-grade microcontrollers [S2]."
+0.1,supply chain,False,18.7,0,1,4,1727.2,C4,2,False,optimized,,0.0,True,1,,True,6.2,1,0.2,2.1,4,1753.4,5.8,0.3,"The supplier quality audit of SinoPower Cell Foundry assessed the Tier-2 SinoPower Cell Foundry QA at Plant 2, High-Tech Industrial Park, Hefei, Anhui Province under Audit Tracking ID AUD-2024-SPC-02 [S4].
+* Aris Thorne, Director of Global Quality Assurance [S2][S4].
+* The target component of the audit was the Prismacell 280Ah LiFePO₄ Cell (CEL-LFP-280) [S2][S4].
+* The audit was conducted across SinoPower's Plant 2 manufacturing lines following elevated field reports of cell voltage divergence (ERR_BMS_701) in Megapack X-7000 modules [S2]."
+0.1,supply chain,True,18.8,5,5,6,1060.7,C5,1,False,optimized,,0.0,False,0,,True,6.0,1,0.2,2.1,6,1086.2,5.8,0.2,"Suppliers in our parts catalog that supply lithium cell modules include Supplier-C, Supplier-E, Supplier-A, Supplier-B, and Supplier-D [S1][S3][S5][S7][S9].
+
+* Supplier-C supplies Lithium Cell Module 48V Model-A (PRT-2009) and Lithium Cell Module 48V Model-PRO (PRT-2090) [S1].
+* Supplier-E supplies Lithium Cell Module 48V Model-A (PRT-2143) and Lithium Cell Module 48V Model-A (PRT-2053), as well as Lithium Cell Module 48V Model-PRO (PRT-2120) [S3].
+* Supplier-A supplies Lithium Cell Module 48V Model-MAX (PRT-2024) [S5].
+* Supplier-B supplies Lithium Cell Module 48V Model-B (PRT-2041) [S7].
+* Supplier-D supplies Lithium Cell Module 48V Model-C (PRT-2115) and Lithium Cell Module 48V Model-MAX (PRT-2087) [S9]."
+0.1,supply chain,True,19.6,2,2,3,898.7,C6,1,False,optimized,,0.0,False,0,,True,7.0,1,0.3,2.0,3,926.1,6.8,0.2,"The Tier-2 cell manufacturer for the Prismacell 280Ah cell is SinoPower Cell Foundry (SUP-SPC-11), and EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) is listed as a secondary supplier alternative [S2][S6].
+
+* The Prismacell 280Ah raw cells (CEL-LFP-280) are supplied by Tier-2 Cell Manufacturer SinoPower Cell Foundry (SUP-SPC-11) [S2].
+* The secondary supplier alternative for the Prismacell 280Ah LFP Cell (CEL-LFP-280) is EVE Energy Corp. (P/N: CEL-LFP-280-EV, ISO 9001 certified) [S6]."
+0.1,grounding,True,19.0,0,0,0,507.2,G1,1,False,optimized,,0.0,False,0,,True,3.3,1,0.2,,0,530.0,3.1,0.0,The available records do not show Gigavolt's total revenue last quarter [S1][S2][S3].
+0.2,grounding,True,17.5,1,1,6,1279.2,G2,1,False,optimized,5.3,0.0,False,0,0.7,True,5.9,1,0.2,2.3,6,1304.2,5.3,0.3,"The service and warranty history for equipment unit SN-4829 shows no ERP records or related claims exist [S1].
+
+* No ERP record exists for SN-4829 because equipment_units has no matching equipment_id or serial_number [S1].
+* Unit SN-4829 has 18 telemetry readings in total and none has a fault code [S2].
+* Telemetry reading TLM-90178 on 2026-09-16 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S8].
+* Telemetry reading TLM-90188 on 2026-09-17 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S6].
+* Telemetry reading TLM-90198 on 2026-09-18 12:15:00 UTC shows Unit SN-4829 (Model G-3500) in status STANDBY with fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S4]."
+0.1,specification,True,0.0,2,2,1,566.3,S1,1,False,optimized,6.3,0.0,False,0,,True,6.6,2,0.2,,1,573.5,4.3,0.1,"The nominal capacity of the Prismacell 280Ah LFP cell is 280 Ah (measured at 0.5 C discharge, 25 °C), and its nominal cell voltage is 3.20 V [S2][S4]."
+0.1,specification,True,0.0,2,2,4,959.2,S2,1,False,optimized,6.4,0.0,False,0,,True,6.8,2,0.2,,4,966.7,4.4,0.2,"The nominal current rating of fuse FUS-FAST-600A is 600 A RMS, and its nominal voltage rating is 700 V DC / 1,000 V AC [S2][S4].
+
+* The component specification applies to the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 energy storage systems [S4].
+* The interrupting rating is 100 kA DC at 700 V DC with a time constant L/R of 10 ms [S2].
+* The melting clearing integral is 42,000 A squared seconds at rated voltage [S2]."
+0.1,specification,True,0.1,2,2,4,767.3,S3,1,False,optimized,,0.0,False,0,,True,5.5,2,0.2,,4,773.7,5.4,0.2,"The Megapack X-7000 delivers a nominal power output of 1,750 kW with an energy capacity of 7,000 kWh (7.0 MWh) [S1][S2].
+
+* Model Identifier: X-7000 [S1][S2]
+* Nominal Output Power: 1,750 kW [S1]
+* Energy capacity: 7,000 kWh (7.0 MWh) [S1][S2]"
+0.2,specification,True,0.0,2,2,1,688.8,S4,1,False,optimized,6.2,0.0,False,0,,True,6.7,2,0.2,,1,696.3,6.6,0.1,The ACT-PYRO-1200 pyrofuse is triggered by a 2.0 A DC pulse of 10 ms duration and clears the arc in less than 1.8 ms from receipt of the command pulse [S4].
+0.1,specification,True,0.0,1,1,4,635.7,S5,1,False,optimized,,0.0,False,0,,True,3.6,2,0.2,,4,640.0,3.4,0.2,"Personnel must evacuate to a minimum perimeter distance of 100 meters (330 feet) during a battery fire emergency [S1][S3].
+
+* Depress the external emergency stop (E-STOP) push-button located on the northwest exterior cabinet panel if smoke, venting, or a continuous audible alarm is present [S1][S3].
+* Evacuate to a minimum perimeter distance of 100 meters (330 feet) [S1][S3].
+* Trip the master substation breaker and isolate the medium-voltage transformer [S2]."
+0.1,specification,True,0.0,1,1,5,835.4,S6,1,False,optimized,2.6,0.0,False,0,,True,11.8,2,0.2,,5,847.9,11.7,0.2,"Fault code ERR_BMS_708 means Thermal Runaway Warning, and its corrective action is for the system to engage auto-deluge, evacuate the area, and prohibit restart without engineering recertification [S2].
+
+* Telemetry Name: Thermal Runaway Warning [S2]
+* Severity: Fatal [S2]
+* Primary Root Cause: Coolant flow obstruction, pump failure, internal short circuit [S2]
+* Corrective Action: System engages auto-deluge, evacuate area, do not attempt restart without engineering recertification [S2]"
+0.1,temporal,True,0.0,2,2,3,2080.3,T1,2,False,optimized,0.4,0.0,True,0,0.9,True,4.7,2,0.2,3.3,3,2087.0,4.6,0.3,"Warranty claims filed for equipment unit EQ-7171 in 2021 consist of two claims with associated details [S1][S2][S3].
+
+* Warranty Claim CLM-9599 was filed on 2021-10-19 and was approved, claiming $2291.49 for the DC Contactor 400A Model-B (PRT-2136) from Supplier-E, with a recorded dispatch link of DISP-13247 which is recorded for a different unit, EQ-5905 [S2].
+* Warranty Claim CLM-10026 was filed on 2021-09-12 and is under review, claiming $1776.70 for the DisplayTech LCD Unit Model-A (PRT-2138) from Supplier-D, with a recorded dispatch link of DISP-14336 which is recorded for a different unit, EQ-5220 [S3]."
+0.1,temporal,True,0.0,2,2,7,2660.9,T2,2,False,optimized,4.5,0.0,True,0,0.7,True,6.0,2,0.2,1.1,7,2668.8,5.9,0.3,"On September 28, 2024, unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export [S9].
+- Telemetry shows a routine standby heartbeat at 2024-09-28 16:00:00 UTC with status STANDBY and no fault [S4].
+- A scheduled high-power ramp was initiated at 2024-09-28 16:04:10 UTC with status RAMP_UP and no fault [S6].
+- A pre-charge resistor failure was detected at 2024-09-28 16:04:11 UTC with status FAULT, fault ERR_PRE_003, and flagged part RES-PR-50 [S8].
+- The mechanism involved firmware v2.4.08 abort failed during the pre-charge resistor failure [S8].
+- A DC Overcurrent Trip and arc flash occurred at 2024-09-28 16:04:12 UTC with status CRITICAL_FAULT, fault ERR_INV_404, max 85.0 C, and flagged parts CON-MAIN-800, PCB-DRV-3500, INV-SCR-9901 [S2][S10].
+- No ERP record exists for SN-X7-0094 [S1]."
+0.1,temporal,True,0.0,1,1,3,801.0,T3,1,False,optimized,4.0,0.0,False,0,0.8,True,5.2,2,0.2,2.7,3,807.8,5.1,0.3,"Unit SN-X7-0150 reported fault code ERR_FUSE_001 in September 2026, appearing across 18 readings [S2].
+
+- Telemetry fault summary shows 18 readings for ERR_FUSE_001 on unit SN-X7-0150 from 2026-09-01 to 2026-09-18, reaching a maximum of 85.0 C [S2].
+- Specific readings including TLM-90026, TLM-90036, TLM-90046, and TLM-90056 recorded fault ERR_FUSE_001 with flagged part FUS-FAST-600A and a DC String Fuse Blown note [S4][S6][S8][S10]."
+0.2,temporal,True,0.0,1,1,2,918.9,T4,1,False,optimized,0.2,0.0,False,0,0.7,True,4.7,2,0.2,2.6,2,925.1,4.2,0.2,"The most recent warranty claim on record for equipment unit EQ-7171 is claim CLM-T0106301 [S3].
+
+* Warranty Claim CLM-T0106301 filed on 2026-11-14 for part Solid-State Circuit Breaker Model-C (PRT-2001) from Supplier-A, with a claimed amount of $845.00, an approved status of Pending, no denial reason, and linked to service event DISP-T0106301 [S3]."
+0.2,temporal,True,0.0,2,2,7,1180.1,T5,1,False,optimized,3.2,0.0,False,0,,True,11.3,2,0.2,,7,1192.2,11.1,0.3,"Fault code ERR_COOL_302 first occurred on 2025-01-14 08:30:00 UTC on unit SN-C12-0055 [S3].
+
+* Telemetry reading TLM-90006 for unit SN-C12-0055 recorded status WARNING, fault ERR_COOL_302, and moderate severity on 2025-01-14 08:30:00 UTC [S3].
+* The reading recorded 480 V, 250 A, 55.4 C, SOC 87.2%, delta 14 mV, and flagged parts SEN-FL-022 and FLT-GLY-701 [S3].
+* The telemetry note stated that a low coolant flow rate was detected [S3].
+* The model-level manual for the Gigavolt Megapack X-7000 (Model: X-7000) in document GV-MAN-X7000-001 states that fault code ERR_COOL_302 corresponds to telemetry name Low Coolant Flow Rate with a moderate severity [S2].
+* The primary root causes for this fault include an airlock in the glycol manifold, strainer clog, or impeller cavitation [S2].
+* Corrective actions involve inspecting flow sensor Part SEN-FL-022, purging air bubbles using service valve SV-3, and topping off with a 50/50 ethylene-glycol mix [S2]."
+0.1,temporal,True,0.0,2,2,1,625.0,T6,1,False,optimized,0.3,0.0,False,0,0.8,True,4.2,2,0.2,2.5,1,630.6,4.1,0.1,Equipment unit EQ-7171 was installed on 2022-07-05 and its warranty expires on 2023-07-05 [S1].
+0.1,multi-hop,True,0.0,3,3,7,1259.2,M1,1,False,optimized,4.8,0.0,False,0,0.8,True,6.0,2,0.3,1.5,7,1266.9,5.8,0.4,"The incident investigation report states that Megapack unit SN-X7-0094 suffered an uncontrolled arc flash within Inverter Bay INV-01 during a scheduled high-power ramp from standby to 1,750 kW full export [S3][S5].
+
+* The incident occurred at 16:04:12 CST on September 28, 2024, at the Rio Bravo Wind and Solar Hybrid Plant in Pecos County, Texas [S3][S5].
+* Total equipment damage was localized to the DC pre-charge contactor and main line contactor CON-MAIN-800, while the high-speed protection circuit tripped upstream 34.5 kV substation recloser REC-34 to isolate the unit [S3].
+* Telemetry reading TLM-90003 flagged part RES-PR-50 with a pre-charge resistor failure and firmware abort failure [S6].
+* Telemetry reading TLM-90004 flagged parts CON-MAIN-800, PCB-DRV-3500, and INV-SCR-9901 with a DC overcurrent trip and arc flash [S8].
+* No personnel injuries occurred during the incident [S3].
+* No ERP record exists for unit SN-X7-0094 [S1]."
+0.1,multi-hop,True,0.0,1,1,6,770.9,M2,1,False,optimized,0.3,0.0,False,0,,True,23.6,2,0.2,0.1,6,795.3,23.4,0.2,"The telemetry fault that occurs most on X-7000 units is ERR_INV_404, with 20 readings on 3 units [S2].
+
+* Model X-7000 manual fault code: ERR_INV_404 [S3]
+* Telemetry name: DC Overcurrent Trip [S3]
+* Severity: High [S3]
+* Primary root cause for model X-7000: Inverter commutation failure, line-to-line bridge breakdown [S3]
+* Corrective action for model X-7000: Inspect Part INV-SCR-9901 thyristor pack and output fuses, and check AC grid synchronization logs [S3]"
+0.1,multi-hop,True,0.0,3,3,10,4869.4,M3,2,False,optimized,1.2,0.0,True,1,0.8,True,4.3,2,0.2,2.8,10,4876.9,4.2,0.6,"The service history of equipment unit EQ-7171 includes multiple service events and warranty claims, and model X-7000 telemetry shows specific fault patterns [S1].
+- Service Event DISP-T0106302: Corrective Maintenance on 2026-11-14 (Pending) with 1.5 hours and $180.00 labor cost, where the technician verified inverter bay INV-01 contactor torque [S2].
+- Service Event DISP-T0106301: Diagnostic on 2026-11-14 (Completed) with 2.5 hours and $300.00 labor cost, where the technician inspected the pre-charge circuit after an ERR_PRE_003 alarm and replaced resistor RES-PR-50, linked to pending warranty claim CLM-T0106301 for part Solid-State Circuit Breaker Model-C (PRT-2001) [S3].
+- Service Event DISP-10768: Emergency Repair on 2023-09-28 (Cancelled) with 10.1 hours and $1515.00 labor cost, for an over-temperature alarm where the heat exchanger was cleaned [S4].
+- Warranty Claim CLM-9208 filed 2023-08-06 (Pending) for Fusing Unit 200A Model-PRO (PRT-2020) with $4241.79 claimed and a recorded dispatch link to DISP-13497 for unit EQ-5224 [S5].
+- Service Event DISP-14701: Software Update on 2022-05-10 (Pending) with 10.3 hours and $1545.00 labor cost, where a faulty thermal sensor was replaced and system bus voltage verified [S6].
+- Warranty Claim CLM-9714 filed 2022-05-04 (Rejected) for Thermal Sensor Module Model-C (PRT-2147) with $522.82 claimed, $0.00 approved due to unauthorized modification detected, and a recorded dispatch link to DISP-13115 for unit EQ-5270 [S7].
+- Warranty Claim CLM-9599 filed 2021-10-19 (Approved) for DC Contactor 400A Model-B (PRT-2136) with $2291.49 claimed and approved, and a recorded dispatch link to DISP-13247 for unit EQ-5905 [S8].
+- Warranty Claim CLM-10026 filed 2021-09-12 (Under Review) for DisplayTech LCD Unit Model-A (PRT-2138) with $1776.70 claimed and a recorded dispatch link to DISP-14336 for unit EQ-5220 [S9].
+- Service Event DISP-14684: Software Update on 2021-06-05 (In Progress) with 1.7 hours and $127.50 labor cost, where inverter output was calibrated [S10]."
+0.2,multi-hop,True,0.0,1,1,5,940.2,M4,1,False,optimized,2.7,0.0,False,0,,True,19.0,2,0.2,0.7,5,960.1,18.8,0.3,"The ERP has no equipment or service records for model C-1200 [S1].
+* Warranty coverage for fault code ERR_COOL_302 requires preventative maintenance records showing quarterly filter service [S3].
+* The warranty is void if air filters FLT-AIR-12 or glycol cartridges FLT-GLY-701 were unserviced for greater than 12 months [S3].
+* The warranty SOP requires telemetry proof of a coolant pump failure or a chiller pressure excursion [S3].
+* Telemetry for fault ERR_COOL_302 shows 20 readings on 2 units with a maximum temperature of 56.5 C from 2025-01-14 to 2026-09-18 [S2][S8]."
+0.1,multi-hop,True,0.0,1,1,4,952.4,M5,1,False,optimized,2.7,0.0,False,0,,True,12.3,2,0.2,,4,965.6,11.8,0.2,"The ratings for part FUS-FAST-600A are a nominal current rating of 600 A RMS, a nominal voltage rating of 700 V DC / 1,000 V AC, an interrupting rating (breaking capacity) of 100 kA DC at 700 V DC with a time constant L/R = 10 ms, and a melting clearing integral (I²t rating) of 42,000 A²s at rated voltage [S6][S7]. 
+
+* The component is a pyro-actuated fast-acting semiconductor DC fuse deployed within energy storage systems including the Megapack X-7000, PowerStation G-3500, and CompactGrid C-1200 [S7].
+* The manufacturer is Eaton Bussmann / Mersen (Gigavolt Qualified Vendor) [S6][S7].
+* The terminal geometry is a flush-end blade style with dual M10 bolt mounting holes and a torque limit of 14.5 N·m [S6]."
+0.1,multi-hop,True,0.0,1,1,7,1098.8,M6,1,False,optimized,,0.0,False,0,,True,3.5,2,0.2,0.1,7,1103.3,3.2,0.4,"The most common service resolutions for X-5000 units include performing preventive checks and firmware updates, while 80 warranty claims were approved [S1][S3].
+
+* Performed standard preventive check and updated firmware to v4.2.1 across 206 dispatches (e.g., DISP-10572, DISP-11563, DISP-10294) [S1].
+* Replaced burnt fuse block with test run completed successfully across 203 dispatches (e.g., DISP-10765, DISP-12818, DISP-12713) [S1].
+* Emergency dispatch for over-temperature alarm by cleaning heat exchanger across 185 dispatches (e.g., DISP-13324, DISP-13100, DISP-12204) [S1].
+* Replaced faulty thermal sensor and verified system bus voltage across 177 dispatches (e.g., DISP-11450, DISP-11158, DISP-12255) [S1].
+* Calibrated inverter output with system operating within normal parameters across 175 dispatches (e.g., DISP-11725, DISP-13908, DISP-10110) [S1].
+* Approved warranty claims total 80 claims with $176134.74 claimed [S3]."
+0.1,supply chain,True,0.0,3,3,4,1084.5,C1,1,False,optimized,,0.0,False,0,,True,7.0,2,0.2,2.2,4,1092.3,6.6,0.3,"Suppliers providing lithium cells for commercial energy storage units include SinoPower Cell Foundry, Voltaic Core Technologies, and Aura Energy Storage Ltd [S2][S8][S10].
+
+* SinoPower Cell Foundry (SUP-SPC-11) is a Tier-2 Cell Manufacturer that supplies Prismacell 280Ah raw cells (CEL-LFP-280) [S2].
+* Voltaic Core Technologies (SUP-VCT-01), operating as a Tier-1 Battery Integrator and manufacturing under contract, supplies the Prismacell 280Ah LiFePO4 cell utilized in the Megapack X-7000 and CompactGrid C-1200 battery modules [S10].
+* Aura Energy Storage Ltd. (SUP-AUR-04) is a Tier-1 supplier that fabricates the CobaltMax 65Ah NMC-811 Pouch Cell (CEL-NMC-065) deployed strictly within the PowerStation G-3500 commercial energy storage unit [S8]."
+0.1,supply chain,True,0.0,1,1,5,919.9,C2,1,False,optimized,,0.0,False,0,,True,9.6,2,0.2,1.8,5,930.3,9.5,0.3,"Apex Cell Tech Corp (SUP-ACT-07) fabricates the Tier-2 pouch cells used in the PowerStation G-3500 [S2][S4][S6].
+
+* The CobaltMax 65Ah NMC-811 pouch cell (Gigavolt Internal P/N: CEL-NMC-065) is deployed strictly within the PowerStation G-3500 commercial energy storage unit [S6].
+* Tier-1 pack supplier Aura Energy Storage Ltd. (SUP-AUR-04) supplies the 24V NMC pouch modules for the PowerStation G-3500 High-Capacity Inverter and Cells [S4][S6].
+* Tier-2 pouch cell fabricator Apex Cell Tech Corp (SUP-ACT-07) supplies the 24V NMC pouch modules and CobaltMax 65Ah pouch cells (CEL-NMC-065) [S2][S4][S6].
+* Tier-3 active material supplier Katanga Cobalt & Mineral Refining (SUP-KMR-03) supplies cobalt sulfate and nickel sulfate hexahydrate crystals [S2]."
+0.1,supply chain,True,0.0,1,1,5,933.4,C3,1,False,optimized,,0.0,False,0,,True,7.1,2,0.2,1.9,5,941.3,7.0,0.2,"Semicon Dynamics Inc. (SUP-SDI-09) is the critical sole-source supplier for the inverter gate drive PCB (PCB-DRV-3500), and the mitigation is a redesign project ECO-2025-004 initiated to utilize discrete automotive-grade microcontrollers [S2][S4].
+
+* Semicon Dynamics Inc. (SUP-SDI-09) is the primary Tier-1/Tier-2 supplier for the Inverter Gate Drive PCB, part number PCB-DRV-3500 [S2].
+* The upstream vulnerability involves a sole-source custom ASIC gate driver chip with a 26-week foundry lead time [S2].
+* The risk level for this component vulnerability is critical [S2].
+* A secondary supplier alternative mitigation involves redesign project ECO-2025-004 initiated to utilize discrete automotive-grade microcontrollers [S2]."
+0.1,supply chain,False,0.0,0,1,6,1927.3,C4,2,False,optimized,,0.0,True,1,,True,6.4,2,0.2,1.9,6,1935.2,6.3,0.3,"The supplier quality audit of SinoPower Cell Foundry found elevated field reports of cell voltage divergence, referenced as fault code ERR_BMS_701, in Megapack X-7000 modules [S2].
+* The unannounced on-site quality and manufacturing process audit was conducted across Plant 2 located in the High-Tech Industrial Park in Hefei, Anhui Province [S2][S4].
+* The audit took place from September 11 to September 13, 2024 [S2][S4].
+* Aris Thorne, who serves as the Director of Global Quality Assurance [S2][S4].
+* The target component of the assessment was the Prismacell 280Ah LiFePO₄ Cell, part number CEL-LFP-280 [S2][S4].
+* The audit was tracked under ID AUD-2024-SPC-02 at the Tier-2 SinoPower Cell Foundry, which has Gigavolt Supplier ID SUP-SPC-11 [S4]."
+0.1,supply chain,True,0.0,5,5,6,1071.2,C5,1,False,optimized,,0.0,False,0,,True,7.0,2,0.2,1.8,6,1078.9,6.8,0.3,"The parts catalog lists suppliers that supply lithium cell modules and related parts [S1][S3][S5][S7][S9].
+
+* Supplier-C supplies matching catalog parts including Lithium Cell Module 48V Model-A (PRT-2009) and Lithium Cell Module 48V Model-PRO (PRT-2090) [S1].
+* Supplier-E supplies matching catalog parts including Lithium Cell Module 48V Model-A (PRT-2143) and Lithium Cell Module 48V Model-PRO (PRT-2120) [S3].
+* Supplier-A supplies matching catalog parts including Lithium Cell Module 48V Model-MAX (PRT-2024) [S5].
+* Supplier-B supplies matching catalog parts including Lithium Cell Module 48V Model-B (PRT-2041) [S7].
+* Supplier-D supplies matching catalog parts including Lithium Cell Module 48V Model-C (PRT-2115) and Lithium Cell Module 48V Model-MAX (PRT-2087) [S9]."
+0.1,supply chain,True,0.0,2,2,4,800.2,C6,1,False,optimized,,0.0,False,0,,True,7.1,2,0.3,2.2,4,808.1,7.0,0.2,"The Tier-2 cell manufacturer for the Prismacell 280Ah cell is SinoPower Cell Foundry (SUP-SPC-11), and EVE Energy Corp. is the secondary supplier alternative [S2][S6].
+
+* The baseline prismatic lithium iron phosphate cell is the Prismacell 280Ah (Gigavolt Internal P/N: CEL-LFP-280) [S4].
+* SinoPower Cell Foundry supplies raw cells and acts as the Tier-2 Cell Manufacturer [S2][S6].
+* EVE Energy Corp. is listed as the secondary supplier alternative with part number CEL-LFP-280-EV and is ISO 9001 certified [S6]."
+0.1,grounding,True,0.0,0,0,0,1318.1,G1,1,False,optimized,,0.0,False,0,,True,3.5,2,0.2,,0,1322.1,3.3,0.0,The available records do not show Gigavolt's total revenue last quarter [S1][S2][S3].
+0.1,grounding,True,0.0,1,1,6,1265.5,G2,1,False,optimized,4.5,0.0,False,0,0.7,True,6.8,2,0.2,1.5,6,1273.9,6.7,0.3,"The available records show no service history or warranty claims for equipment unit SN-4829 [S1].
+
+* No ERP record exists for SN-4829 as the equipment units database has no matching equipment ID or serial number [S1].
+* Unit SN-4829 has 18 telemetry readings in total, and none of them contains a fault code [S2].
+* Telemetry reading TLM-90178 on 2026-09-16 12:15:00 UTC for Model G-3500 shows status STANDBY, fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S8].
+* Telemetry reading TLM-90188 on 2026-09-17 12:15:00 UTC for Model G-3500 shows status STANDBY, fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S6].
+* Telemetry reading TLM-90198 on 2026-09-18 12:15:00 UTC for Model G-3500 shows status STANDBY, fault none, severity Info, 800 V, 0 A, 31.0 C, SOC 95.0%, delta 9 mV, and flagged parts none [S4]."

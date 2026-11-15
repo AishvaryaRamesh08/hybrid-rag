@@ -1,0 +1,12 @@
+# /etc/systemd/system/gigavolt-pipeline.timer - runs the pipeline every 10 minutes
+# Install: sudo cp gigavolt-pipeline.* /etc/systemd/system/ && sudo systemctl enable --now gigavolt-pipeline.timer
+[Unit]
+Description=Run the Gigavolt data pipeline every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

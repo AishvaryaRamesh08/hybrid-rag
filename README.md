@@ -2,19 +2,19 @@
 
 A question-answering system for a fictional battery manufacturer, Gigavolt Dynamics. Engineers ask questions in plain English, and the system answers from ERP records, technical PDFs and battery telemetry, citing the source record behind every statement.
 
-I built it in five phases alongside my Advanced Data Management course (Fall 2026), going from messy CSV files to a working retrieval-augmented generation (RAG) system on AWS.
+I built it in six phases alongside my Advanced Data Management course (Fall 2026), going from messy CSV files to an automated retrieval-augmented generation (RAG) system on AWS: new data is detected, cleaned, loaded and made answerable by a scheduled pipeline.
 
-![Architecture](docs/images/architecture.png)
+![Architecture](automation/docs/architecture.png)
 
 ## Results
 
 | Measure | Result |
 |---|---|
-| Median end-to-end answer time | **1.78 s** (36 benchmark runs) |
-| Median retrieval time, three databases in parallel | **18 ms** |
-| Answer statements traced to a source record | **190 of 199 (95.5%)** |
-| Vector search (HNSW) | 0.44 ms median, recall@5 0.952 |
-| Data ready for retrieval | 6,199 ERP records, 191 document chunks, 200 telemetry readings |
+| Median end-to-end answer time | **0.93 s** (26 questions x 2, all 52 runs under 5 s) |
+| Retrieval P50 / P99, three databases in parallel | **6.6 / 24.1 ms** (Phase 5: 20.4 / 79.0 ms) |
+| Retrieval throughput, 8 clients | **162 queries/s** (Phase 5: 24) |
+| Answer statements traced to a source record | **228 of 228 (100%)**; 154/154 cited sources re-checked in their database |
+| New data to answerable | One pipeline run (every 10 minutes), only changed items re-embedded |
 
 ## How a question is answered
 
@@ -48,6 +48,7 @@ The project uses a synthetic dataset from [622.gomillion.org](https://622.gomill
 | 3. High availability | A 3-node MariaDB Galera cluster with failover testing, and a ColumnStore analytics table compared with InnoDB | `cluster/` |
 | 4. Vector search | Sentence-aware chunking, MiniLM embeddings, ChromaDB with an HNSW index tuned through a parameter benchmark | `vector/` |
 | 5. Hybrid RAG | Telemetry in indexed MongoDB, the hybrid retriever, the Gemini pipeline, the verifier, a live demo and a benchmark | `rag/`, `results/` |
+| 6. Automation and optimization | A Python DAG on a systemd timer: SHA-256 file detection, trigger-based CDC, validation with quarantine, incremental loading and re-embedding, integrity checks; a pooled, cached and index-tuned RAG pipeline with a provenance audit | `automation/` ([details](automation/README.md)) |
 
 ## Design choices
 
@@ -70,6 +71,7 @@ The project uses a synthetic dataset from [622.gomillion.org](https://622.gomill
    ```
 4. **Add your key:** put `GEMINI_API_KEY=...` in `/opt/gigavolt/config.env`.
 5. **Ask questions:** run `python demo.py`, or run `python benchmark_rag.py --repeat 3` to reproduce the benchmark.
+6. **Automate it:** follow [`automation/README.md`](automation/README.md) to install the pipeline, the CDC triggers and the 10-minute timer.
 
 ## Repository layout
 
@@ -80,6 +82,7 @@ The project uses a synthetic dataset from [622.gomillion.org](https://622.gomill
 | `vector/` | Chunking, embedding and ChromaDB code, plus the HNSW benchmark notebook |
 | `rag/` | Hybrid retrieval, RAG pipeline, prompt template, demo and benchmark |
 | `infra/` | EC2 setup and database build scripts |
-| `results/` | Latency report and test answers with provenance |
+| `results/` | Phase 5 latency report and test answers with provenance |
+| `automation/` | Phase 6: pipeline, CDC, optimized RAG, benchmark, demo and their results |
 
 **Tech stack:** Python, SQL, MariaDB (Galera, ColumnStore), MongoDB, ChromaDB, sentence-transformers, pdfplumber, Google Gemini, AWS EC2

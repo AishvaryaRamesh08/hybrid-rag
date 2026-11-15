@@ -1,0 +1,27 @@
+[
+  {
+    "file": "GV-ECO-2026-077_Change_Order_Precharge_Resistor_Upgrade.pdf",
+    "shows": "Megapack X-7000 change order: new resistor part, affected serials (text + table)",
+    "question": "What does ECO-2026-077 change on the Megapack X-7000 and which units are affected?"
+  },
+  {
+    "file": "GV-INC-2026-131_Field_Incident_Coolant_Pump_Bearing_Failure.pdf",
+    "shows": "PowerStation G-3500 field incident: root cause, corrective actions, timeline table",
+    "question": "What caused incident INC-2026-131 on the PowerStation G-3500 and what are the corrective actions?"
+  },
+  {
+    "file": "GV-SOP-INSP-715_SOP_Thermal_Imaging_Inspection.pdf",
+    "shows": "CompactGrid C-1200 procedure: thermal imaging steps, severity-class table",
+    "question": "In SOP-INSP-715, what action is required for each thermal imaging severity class on the C-1200?"
+  },
+  {
+    "file": "GV-TSB-2026-014_Technical_Service_Bulletin_Firmware_7.5.0.pdf",
+    "shows": "a new document type (service bulletin): firmware 7.5.0 for all three models",
+    "question": "What does firmware BMS-FW-7.5.0 in TSB-2026-014 fix and how should it be installed?"
+  },
+  {
+    "file": "GV-SOP-SCAN-999_Scanned_Inspection_Checklist.pdf",
+    "question": null,
+    "shows": "error handling: an image-only scan with no text -> the file is quarantined"
+  }
+]
