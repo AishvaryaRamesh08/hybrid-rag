@@ -19,7 +19,7 @@ def show(record):
     if record.get("regenerated"):
         print("NOTE: the answer was regenerated once after the verifier flagged a statement")
     for statement in record.get("removed_statements", []):
-        print(f"REMOVED (could not be traced to a source): {statement[:120]}")
+        print(f"REMOVED (could not be traced to a source): {statement}")
 
 
 def main():

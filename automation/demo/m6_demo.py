@@ -169,7 +169,7 @@ def show_loaded_rows(batch):
     """The new CSV rows as they arrived, then as they are stored in MariaDB after the run."""
     step(f"The raw CSV file that arrived: {batch['dispatches_csv'].name}")
     for line in batch["dispatches_csv"].read_text().splitlines():
-        print(paint("  " + (line if len(line) <= 120 else line[:117] + "..."), "2"))
+        print(paint("  " + line, "2"))
 
     d_ids, c_ids = batch["dispatch_ids"], batch["claim_ids"]
     ph = lambda ids: ", ".join(["%s"] * len(ids))       # noqa: E731
@@ -298,7 +298,7 @@ def part4():
     step("Structured log file")
     print(f"  {config.LOG_FILE}")
     for line in config.LOG_FILE.read_text().splitlines()[-3:]:
-        print("  " + line[:150])
+        print("  " + line)
     points("Bad rows (unknown unit, unreadable date, missing ID) are set aside with the reason; the good rows "
            "still load",
            "Each task retries with exponential backoff; if it still fails, the tasks after it are 'blocked' so "
@@ -330,7 +330,7 @@ def part5():
     rows = []
     for q in PERF_QUESTIONS:
         b, o = retrieval_ms(baseline, q), retrieval_ms(opt.retriever, q)
-        rows.append((q[:62], f"{b:.1f} ms", f"{o:.1f} ms", f"{b / o:.1f}x"))
+        rows.append((q, f"{b:.1f} ms", f"{o:.1f} ms", f"{b / o:.1f}x"))
     table(rows, ["question", "Milestone 5", "Milestone 6", "faster"])
 
     step("Answer cache: the same question twice (the second skips retrieval and Gemini)")
@@ -391,7 +391,7 @@ def part7():
         show(records[-1])
     step("Provenance audit: each cited source fetched again from MariaDB, MongoDB or ChromaDB")
     results = provenance_audit.audit(records, opt.retriever)
-    rows = [(s["tag"], f"{s['db']}.{s['source']}", s["record_id"][:34], s["kind"], s["outcome"])
+    rows = [(s["tag"], f"{s['db']}.{s['source']}", s["record_id"], s["kind"], s["outcome"])
             for r in results for s in r["sources"]]
     table(rows, ["tag", "database.table", "record", "kind", "check"])
     new_ids = re.findall(r"DISP-T\d+|CLM-T\d+", record["answer"])

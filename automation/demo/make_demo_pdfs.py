@@ -121,7 +121,7 @@ DOCS = [
             "Estimated affected population: 64 G-3500 units at 7 high-temperature sites.",
             "Estimated labour time for the seal retrofit: 1.5 hours per pump.",
             "Warranty claims for this failure mode must reference incident INC-2026-131."]),
-        "question": "What caused incident INC-2026-131 on the PowerStation G-3500 and what are the corrective actions?",
+        "question": "What does incident report INC-2026-131 give as the root cause and the corrective action steps for the G-3500 coolant pump failure?",
     },
     {
         "file": "GV-SOP-INSP-715_SOP_Thermal_Imaging_Inspection.pdf",
@@ -158,7 +158,7 @@ DOCS = [
         "after_table": ("Records", [
             "Every IR-3 and IR-4 finding must be reported to Field Service Engineering within 24 hours.",
             "Thermal images are kept for 5 years with the unit service history."]),
-        "question": "In SOP-INSP-715, what action is required for each thermal imaging severity class on the C-1200?",
+        "question": "In procedure SOP-INSP-715, what action is required for each thermal imaging severity class on the C-1200?",
     },
     {
         "file": "GV-TSB-2026-014_Technical_Service_Bulletin_Firmware_7.5.0.pdf",
@@ -192,7 +192,7 @@ DOCS = [
             "The front panel may show version 7.4.9 for up to 10 minutes after the update; this is a "
             "display delay only.",
             "Do not downgrade from 7.5.0 to any version below 7.4.0; doing so resets the cell calibration table."]),
-        "question": "What does firmware BMS-FW-7.5.0 in TSB-2026-014 fix and how should it be installed?",
+        "question": "What does firmware BMS-FW-7.5.0 in TSB-2026-014 fix, and what are the installation steps?",
     },
 ]
 

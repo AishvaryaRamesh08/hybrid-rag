@@ -181,7 +181,7 @@ def show_status(runs=3):
             cur.execute("SELECT task, status, duration_ms, attempts, rows_in, rows_out, message FROM etl_task_runs "
                         "WHERE run_id=%s", (run["run_id"],))
             for t in sorted(cur.fetchall(), key=lambda t: PIPELINE.order.index(t["task"])):
-                print(f"  {t['task']:<24}{t['status']:<9}{t['duration_ms'] or 0:>7} ms  tries={t['attempts']}  {(t['message'] or '')[:110]}")
+                print(f"  {t['task']:<24}{t['status']:<9}{t['duration_ms'] or 0:>7} ms  tries={t['attempts']}  {t['message'] or ''}")
             cur.execute("SELECT source_type, reason, COUNT(*) n FROM etl_quarantine WHERE run_id=%s GROUP BY 1,2", (run["run_id"],))
             for q in cur.fetchall():
                 print(f"  quarantined: {q['n']} {q['source_type']} - {q['reason']}")
