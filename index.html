@@ -209,6 +209,7 @@ nav .links a:hover{color:var(--ink)}
 .fact{border-top:1px solid var(--line2);padding-top:12px}
 .fact b{display:block;font-size:15px}
 .fact span{font-size:13px;color:var(--muted)}
+@media(max-width:520px){.conv{grid-template-columns:repeat(2,1fr)!important}}
 @media(max-width:900px){.conv{grid-template-columns:repeat(3,1fr)}.facts{grid-template-columns:1fr 1fr}.belt{display:none}.quar{margin-top:14px}}
 
 /* ---------- benchmarks ---------- */
@@ -687,7 +688,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 70px}
   }
   var so = new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if (en.isIntersecting) setStep(+en.target.dataset.step); });
-  }, {rootMargin:'-45% 0px -45% 0px'});
+  }, {rootMargin: matchMedia('(max-width:940px)').matches ? '-62% 0px -30% 0px' : '-45% 0px -45% 0px'});
   steps.forEach(function(s){ so.observe(s); });
   setStep(1);
 
