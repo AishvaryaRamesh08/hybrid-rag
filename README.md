@@ -4,6 +4,8 @@ A question-answering system for a fictional battery manufacturer, Gigavolt Dynam
 
 I built it in six phases alongside my Advanced Data Management course (Fall 2026), going from messy CSV files to an automated retrieval-augmented generation (RAG) system on AWS: new data is detected, cleaned, loaded and made answerable by a scheduled pipeline.
 
+**Live project site:** https://aishvaryaramesh08.github.io/hybrid-rag/
+
 ![Architecture](automation/docs/architecture.png)
 
 ## Results
